@@ -49,7 +49,10 @@ const Index = () => {
         Ingredient Analyzer
       </Heading>
       <Text textAlign="center">Take a photo of the product ingredients and find out their health risk.</Text>
-      <IconButton aria-label="Capture Ingredients" icon={<FaCamera />} size="lg" colorScheme="teal" onClick={handleCaptureAndAnalyze} />
+      <Button leftIcon={<FaCamera />} colorScheme="teal" onClick={() => navigate("/camera")}>
+        Capture Ingredients
+      </Button>
+      <IconButton aria-label="Capture Ingredients" icon={<FaCamera />} size="lg" colorScheme="teal" onClick={handleCaptureAndAnalyze} style={{ display: "none" }} />
       {ingredients.length > 0 && (
         <Box mt={5}>
           <Heading as="h2" size="lg">
