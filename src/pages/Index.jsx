@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, VStack, Heading, Text, List, ListItem, ListIcon, IconButton, useToast } from "@chakra-ui/react";
 import { FaCamera, FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const [ingredients, setIngredients] = useState([]);
@@ -49,6 +50,7 @@ const Index = () => {
         Ingredient Analyzer
       </Heading>
       <Text textAlign="center">Take a photo of the product ingredients and find out their health risk.</Text>
+      const navigate = useNavigate();
       <Button leftIcon={<FaCamera />} colorScheme="teal" onClick={() => navigate("/camera")}>
         Capture Ingredients
       </Button>
